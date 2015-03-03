@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dduval <dduval@student.42.fr>              +#+  +:+       +#+        */
+/*   By: frcugy <frcugy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 13:55:29 by dduval            #+#    #+#             */
-/*   Updated: 2015/03/03 16:35:55 by dduval           ###   ########.fr       */
+/*   Updated: 2015/03/03 18:03:12 by frcugy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef	struct		s_trap
 	char			*name;
 	char			*desc;
 	int				coast;
-	t_effects		*effect;
+	int				effect;
 	struct	s_trap	*next;
 	struct	s_trap	*prev;
 }					t_trap;
