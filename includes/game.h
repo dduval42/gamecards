@@ -6,22 +6,25 @@
 /*   By: dduval <dduval@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 13:55:29 by dduval            #+#    #+#             */
-/*   Updated: 2015/03/03 18:30:40 by dduval           ###   ########.fr       */
+/*   Updated: 2015/03/03 18:52:54 by dduval           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GAME_H
 # define GAME_H
+# include <functions.h>
 # include <libft.h>
 # include <ncurses.h>
 # define HEIGHTBOARD (LINES / 4) - 4
 # define HEIGHTCARD LINES / 4
 # define WIDHTCARD COLS / 8
-# define NAMEPOS
-# define DESCPOS
-# define ATKPOS
+# define NAMEPOS 2, 2
+# define DESCPOS 4, 2
+# define ATKPOS 6, 10
 # define LIFEPOS COLS / 9,
 # define COASTPOS 0, 0
+# define TYPEPOSE 3,2
+# define ELEMPOSE 5, 2
 # define MAGIC 1
 # define TRAP 2
 # define BEAST 3
@@ -48,7 +51,7 @@ typedef	struct		s_magic
 	char			*name;
 	char			*desc;
 	int				coast;
-	t_effects		*effect;
+	int				*effect;
 	char			*elem;
 	struct	s_magic	*next;
 	struct	s_magic	*prev;
@@ -61,7 +64,7 @@ typedef	struct		s_beast
 	char			*desc;
 	int				coast;
 	int				life;
-	t_effects		*effect;
+	int				*effect;
 	int				atk;
 	char			*type;
 	char			*elem;
@@ -106,4 +109,5 @@ typedef	struct		s_databoard
 	t_deck			*hand2;
 	t_deck			*board2;
 }					t_databoard;
+
 # endif
