@@ -1,13 +1,15 @@
 NAME = gamecards
 
 SRC_O =		fill_list.o	get_cards.o	hub.o	hub_game.o
-SRC_O +=	main.o	print_board.o
+SRC_O +=	main.o	print_board.o	fill_deck.o
+SRC_O +=	print_spec.o	print_card_board.o
+SRC_O +=	print_players.o	init_screen.o
 
 SRC = ./proj/src/
 
 OBJ = ./proj/obj/
 
-CFLAGS = -Wall -Wextra -Werror -ncurses
+CFLAGS = -lncurses
 
 INC = ./includes
 
@@ -15,9 +17,9 @@ LIB = libft
 
 LFLAGS = -lft
 
-LIB2 = libft
+LIB2 =
 
-L2FLAGS = -lft
+L2FLAGS = -lncurses
 
 CC = gcc
 
@@ -37,7 +39,7 @@ endif
 $(NAME): $(OBJ_O)
 	echo "[33; 1m Creation objets[0m"
 	make -C $(LIB)
-	$(CC) -o $@ $(OBJ_O) -L $(LIB) $(LFLAGS) $(DFLAGS)
+	$(CC) -o $@ $(OBJ_O) -L $(LIB) $(LFLAGS) $(DFLAGS) $(L2FLAGS)
 	echo "[31; 1m Creation Exe[0m"
 
 proper: $(NAME) clean
@@ -55,4 +57,4 @@ fclean: clean
 re: fclean all
 
 $(addprefix $(OBJ), %.o): $(addprefix $(SRC), %.c)
-	$(CC) -c  $< -o $@ -I $(INC)
+	$(CC) $(CFLAGS) -c  $< -o $@ -I $(INC)
