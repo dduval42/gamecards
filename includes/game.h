@@ -6,7 +6,7 @@
 /*   By: dduval <dduval@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 13:55:29 by dduval            #+#    #+#             */
-/*   Updated: 2015/03/03 16:35:55 by dduval           ###   ########.fr       */
+/*   Updated: 2015/03/03 17:36:32 by dduval           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,18 @@
 # define GAME_H
 # include <libft.h>
 # include <ncurses.h>
-
+# define HEIGHTBOARD (LINES / 4) - 4
+# define HEIGHTCARD LINES / 4
+# define WIDHTCARD COLS / 8
+# define NAMEPOS
+# define DESCPOS
+# define ATKPOS
+# define LIFEPOS COLS / 9,
+# define COASTPOS 0, 0
+# define MAGIC 1
+# define TRAP 2
+# define BEAST 3
+# define BACKCARD 0
 typedef	struct	s_effects
 {
 
@@ -38,8 +49,7 @@ typedef	struct		s_magic
 	char			*desc;
 	int				coast;
 	t_effects		*effect;
-	int				type;
-	int				elem;
+	char			*elem;
 	struct	s_magic	*next;
 	struct	s_magic	*prev;
 }					t_magic;
@@ -53,8 +63,8 @@ typedef	struct		s_beast
 	int				life;
 	t_effects		*effect;
 	int				atk;
-	int				type;
-	int				elem;
+	char			*type;
+	char			*elem;
 	struct	s_beast	*next;
 	struct	s_beast	*prev;
 }					t_beast;
@@ -89,9 +99,11 @@ typedef	struct		s_databoard
 	t_deck			*deck1;
 	t_deck			*cim1;
 	t_deck			*hand1;
+	t_deck			*board1;
 	t_player		*player2;
 	t_deck			*deck2;
 	t_deck			*cim2;
 	t_deck			*hand2;
+	t_deck			*board2;
 }					t_databoard;
 # endif
