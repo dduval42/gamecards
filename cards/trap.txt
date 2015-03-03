@@ -1,0 +1,14 @@
+//name description coast effectid
+Piege du chasseur:Prend des degats a la place du Hero:1:3
+Piege du chasseur:Prend des degats a la place du Hero:1:3
+Piege du chasseur:Prend des degats a la place du Hero:1:3
+Piege du chasseur:Prend des degats a la place du Hero:1:3
+Piege du chasseur:Prend des degats a la place du Hero:1:3
+Piege du chasseur:Prend des degats a la place du Hero:1:3
+Piege du chasseur:Prend des degats a la place du Hero:1:3
+Piege du chasseur:Prend des degats a la place du Hero:1:3
+Piege du chasseur:Prend des degats a la place du Hero:1:3
+Piege du chasseur:Prend des degats a la place du Hero:1:3
+Piege du chasseur:Prend des degats a la place du Hero:1:3
+Piege du chasseur:Prend des degats a la place du Hero:1:3
+Piege du chasseur:Prend des degats a la place du Hero:1:3
