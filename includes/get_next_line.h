@@ -6,7 +6,7 @@
 /*   By: frcugy <frcugy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 14:12:58 by dduval            #+#    #+#             */
-/*   Updated: 2015/03/03 16:59:30 by frcugy           ###   ########.fr       */
+/*   Updated: 2015/03/03 18:48:21 by frcugy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # define GET_NEXT_LINE_H
 # include <sys/types.h>
 # include <sys/uio.h>
-# define BUFF_SIZE 1
+# include <fcntl.h>
+# define BUFFER_SIZE 100
 
 typedef struct		s_fd
 {
