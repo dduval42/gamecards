@@ -7,7 +7,7 @@ SRC = ./proj/src/
 
 OBJ = ./proj/obj/
 
-CFLAGS =
+CFLAGS = -Wall -Wextra -Werror -ncurses
 
 INC = ./includes
 
